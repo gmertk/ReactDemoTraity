@@ -18,19 +18,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|assets)/,
         loader: 'babel'
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css?modules!postcss'
       }
     ]
   },
-
-  postcss: [
-    require('autoprefixer')
-  ],
 
   plugins: [
     new HtmlWebpackPlugin({
